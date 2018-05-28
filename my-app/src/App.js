@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Radium from 'radium';
 import './App.css';
 import MyPerson from './Person/Person';
 class App extends Component {
@@ -24,16 +23,8 @@ class App extends Component {
     
   }
   render() {
-    let style ={
-      backgroundColor : 'red',
-      color: 'white'
-    }
-    style[':hover'] = {
-      backgroundColor:'maroon',
-      color:'beige'
-    }
     return (
-      <div className="App">
+      <div className="styles.App" >
         <h1>This is My first React app</h1>
         <button style = {style} onClick={this.incrementButtonHandler}>Increment</button>
         <MyPerson string = {this.state.value}/>
@@ -52,4 +43,4 @@ class App extends Component {
 
 
 
-export default Radium(App);
+export default App;
