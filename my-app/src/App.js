@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import styles from './App.css';
 import MyPerson from './Person/Person';
 class App extends Component {
   index = 1;
@@ -24,9 +24,9 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="styles.App" >
+      <div className={styles.App} >
         <h1>This is My first React app</h1>
-        <button style = {style} onClick={this.incrementButtonHandler}>Increment</button>
+        <button className = {styles.Red} onClick={this.incrementButtonHandler}>Increment</button>
         <MyPerson string = {this.state.value}/>
         <p>{this.index}</p>
       </div>
